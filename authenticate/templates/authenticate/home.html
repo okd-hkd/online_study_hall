@@ -24,8 +24,15 @@
 <a>We are regularly hosting study events using <a href="https://zoom.us/download">Zoom</a>. </p> 
 <br>
 
+{% if user.is_authenticated %}
 <p>Currently, we have one English tutor. The study sessions are scheduled on Saturday at 2:00 PM </p>
 <img src="{% static '50-participant-gallery-view-example.png' %}"/>
+
+Other functions are under develpment...
+
+
+{% endif %}
+
 
 <br><br>
 {% endblock %}
