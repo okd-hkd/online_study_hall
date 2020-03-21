@@ -1,0 +1,31 @@
+
+{% extends 'authenticate/base.html'%}
+
+{% load static %}
+
+{% block content %}
+
+<h1> Welcome to Online Study Hall </h1>
+<!-- 
+{% if user.is_authenticated %}
+  <p>Your Name: {{ user.first_name }} {{ user.last_name }}</p>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+   <p>fav_color: {{ user.fav_color }}</p> -->
+  <!-- <li>Location: {{ user.profile.location }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li> -->
+
+
+
+<!-- {% endif  %} -->
+
+
+<h2>What is Online Study Hall?</h2>
+<a>We are regularly hosting study events using <a href="https://zoom.us/download">Zoom</a>. </p> 
+<br>
+
+<p>Currently, we have one English tutor. The study sessions are scheduled on Saturday at 2:00 PM </p>
+<img src="{% static '50-participant-gallery-view-example.png' %}"/>
+
+<br><br>
+{% endblock %}

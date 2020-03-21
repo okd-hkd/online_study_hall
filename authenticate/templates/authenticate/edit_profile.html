@@ -1,0 +1,55 @@
+
+{% extends 'authenticate/base.html'%}
+
+{% block content %}
+
+<h1 class = text-center>Edit Profile</h1>
+
+
+  <form method='POST' action="{% url 'edit_profile' %} ">
+    {% csrf_token %}
+
+    {% if form.errors %}
+      <div class='alert alert-warning alert-dismissable' role='alert'>
+        <button class='close' data-dismiss='alert'>
+            <small><sup>x</sup></small>
+        </button>
+        <p>Your Form Has Errors.</p>
+
+        {% for field in form%}
+          {% if field.errors %}
+              {{ field.errors }}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+     
+    {% endif %}
+
+    {{form.as_p}}
+
+
+    <input type="submit" value='Edit Profile' class='btn btn-secondary'>
+  </form>
+  <br><br>
+  <p><small>Click<a href="{% url 'change_password' %}"> Here </a>to Change Your Password</small></p>
+
+
+    <div>
+    {% if user.is_authenticated %}
+    <p>Your Name: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <!-- <p>fav_color: {{ user.fav_color }}</p> -->
+    <!-- <li>Location: {{ user.profile.location }}</li>
+    <li>Birth Date: {{ user.profile.birth_date }}</li> -->
+    </div>
+
+
+{% endif  %}
+
+
+{% endblock %}
+
+
+def change_password(request):

@@ -1,0 +1,30 @@
+
+
+
+{% extends 'authenticate/base.html'%}
+
+{% block content %}
+
+<h1> Profile Page </h1>
+
+{% if user.is_authenticated %}
+
+  <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+  <!-- <p>fav_color: {{ user.fav_color }}</p> -->
+  <!-- <li>Location: {{ user.profile.location }}</li>
+  <li>Birth Date: {{ user.profile.birth_date }}</li> -->
+
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  <!-- {{ profile_form.as_p }} -->
+  <button type="submit">Save changes</button>
+</form>
+
+
+
+{% endif  %}
+
+{% endblock %}

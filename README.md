@@ -1,6 +1,13 @@
-# django_authenticate_app
+# Online Study Hall
 
-This is a simple app allowing only for registering new user, logging in/lout, editing user profile and passwords.
+This is an app that allows users to 
+- registe as a new user, 
+- log in/lout, 
+- edit user profile and password.
+
+
 
 1. git clone 
-2. pythn3 manage.py runserver
+2. python manage.py migrate
+3. pythn3 manage.py runserver
+
