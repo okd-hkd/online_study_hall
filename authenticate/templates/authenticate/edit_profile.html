@@ -35,16 +35,6 @@
   <p><small>Click<a href="{% url 'change_password' %}"> Here </a>to Change Your Password</small></p>
 
 
-    <div>
-    {% if user.is_authenticated %}
-    <p>Your Name: {{ user.first_name }} {{ user.last_name }}</p>
-    <p>Username: {{ user.username }}</p>
-    <p>Email: {{ user.email }}</p>
-    <!-- <p>fav_color: {{ user.fav_color }}</p> -->
-    <!-- <li>Location: {{ user.profile.location }}</li>
-    <li>Birth Date: {{ user.profile.birth_date }}</li> -->
-    </div>
-
 
 {% endif  %}
 
