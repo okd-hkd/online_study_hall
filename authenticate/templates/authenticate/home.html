@@ -4,8 +4,9 @@
 {% load static %}
 
 {% block content %}
-
-<h1> Welcome to Online Study Hall </h1>
+ 
+<h1 class='display-3 text-monospace'> Welcome to Online Study Hall </h1>
+<hr>
 <!-- 
 {% if user.is_authenticated %}
   <p>Your Name: {{ user.first_name }} {{ user.last_name }}</p>
@@ -20,17 +21,43 @@
 <!-- {% endif  %} -->
 
 
-<h2>What is Online Study Hall?</h2>
-<a>We are to regularly host study events using <a href="https://zoom.us/download">Zoom</a>. </p> 
-<p>Please download and signup to access Online Study Hall! (The URL will be sent before the study session starts.)</p>
+<h1 class='display-4 text-monospace'>What is Online Study Hall?</h2>
+<a class='text-monospace'>We are to regularly host study events. </p> 
+<p class='text-monospace'>This study gruop aims to motivate each other by studying together online and ask questions to a tutor regarding English language. </p>
+<p class='text-monospace'>Please register as a user and download <a href="https://zoom.us/download">Zoom</a> or access to Whereby to access Online Study Hall! (The URL will be sent before the study session starts.)</p>
+
+
 <br>
 
 {% if user.is_authenticated %}
-<p>Currently, study sessions are scheduled on Saturday at 2:00 PM </p>
-<img src="{% static '50-participant-gallery-view-example.png' %}"/>
-
+<p class='text-center text-monospace'>Currently, study sessions are scheduled on Saturday at 2:00 PM. </p>
+<figure class="figure"></figure>
+  <img src=" {% static '50-participant-gallery-view-example.png' %}" class="img-fluid rounded mx-auto d-block" alt="Responsive image"/>
+  <figcaption class="figure-caption text-center">The study session will be like an image above. Other functions such as carenders and booking systems are currently under develpment.</figcaption>
+</figure>
 <br>
-<p>Other functions are under develpment...</p>
+<br>
+<dl class="row border border-secondary">
+  <dt class="col-sm-3 text-center">Members</dt>
+  <dd class="col-sm-9 text-center">Everyone who study English.</dd>
+
+  <dt class="col-sm-3 text-center">Time</dt>
+  <dd class="col-sm-9 text-center">Every Saturday, 2:00 PM(JST)</dd>
+
+  <dt class="col-sm-3 text-center" >Price</dt>
+  <dd class="col-sm-9 text-center">At this moment, FREE for everyone.</dd>
+
+  <dt class="col-sm-3 text-center">Textbooks</dt>
+  <dd class="col-sm-9 text-center">Please prepare by yourself.</dd>
+
+  <dt class="col-sm-3 text-center">Personal mentoring</dt>
+  <dd class="col-sm-9 text-center">Please contact me so I can give you some advice for your study.</dd>
+   
+  </dd>
+</dl>
+
+
+<p></p>
 
 
 {% endif %}
