@@ -3,11 +3,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'), # {% url 'home'%}　で　逆引きできる
+    path('index/', views.index, name='index'), # {% url 'home'%}　で　逆引きできる
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),
     path('register/', views.register_user, name='register'),
     path('edit_profile/', views.edit_profile, name='edit_profile'),
     path('change_password/', views.change_password, name='change_password'),
+    path('', views.home, name='home'), # {% url 'home'%}　で　逆引きできる
+    # path('', views.index, name='index'), # {% url 'home'%}　で　逆引きできる
 
 ]

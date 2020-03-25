@@ -11,6 +11,11 @@ def home(request):
     return render(request, 'authenticate/home.html',{})
 
 
+def index(request):
+    return render(request, 'authenticate/index.html',{})
+
+
+
 def login_user(request):
     if request.method == 'POST':
         username = request.POST['username']
