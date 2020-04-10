@@ -1,7 +1,14 @@
+
+{% load static %}
 <!doctype html>
 <html lang="en">
 
-<head>
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136692212-3"></script>
@@ -15,21 +22,38 @@
 
 
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Online Study Hall</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>Online Study Hall</title>
+	
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+    
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="{% static 'authenticate/css/font-awesome.min.css' %}">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{% static 'authenticate/css/style.css' %}"/>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+
 
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="{% url 'home' %}">Online Study Hall</a>
+    <a class="navbar-brand" href="{% url 'index' %}">Online Study Hall</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -54,6 +78,9 @@
 
 
         {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index'%}">Home</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'login'%}">Login</a>
         </li>

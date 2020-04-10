@@ -6,81 +6,6 @@
 {% block content %}
 
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<title>Online Study Hall</title>
-
-		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
-		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="{% static 'authenticate/css/bootstrap.min.css' %}"/>
-
-
-    
-
-		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="{% static 'authenticate/css/font-awesome.min.css' %}">
-
-		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="{% static 'authenticate/css/style.css' %}"/>
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-    </head>
-	<body>
-
-
-		<!-- Header -->
-		<header id="header" class="transparent-nav">
-			<div class="container">
-
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-							<img src="./img/logo-alt.png" alt="logo">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Mobile toggle -->
-					<button class="navbar-toggle">
-						<span></span>
-					</button>
-					<!-- /Mobile toggle -->
-				</div>
-
-				<!-- Navigation -->
-				<nav id="nav">
-					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="/">Home</a></li>
-						<li><a href="{% url 'home'%}">About</a></li>
-						<li><a href="#">Courses</a></li>
-            <li><a href="{% url 'login'%}">Login</a></li>
-            <li><a href="{% url 'register'%}">Sign up</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</nav>
-				<!-- /Navigation -->
-
-			</div>
-		</header>
-		<!-- /Header -->
-
 		<!-- Home -->
 		<div id="home" class="hero-area">
 
@@ -93,8 +18,8 @@
 					<div class="row">
 						<div class="col-md-8">
 							<h1 class="white-text">Online Study Hall</h1>
-							<p class="lead white-text">alii error homero.</p>
-							<a class="main-button icon-button" href="#">Get Started!</a>
+							<p class="lead white-text">Online Study Hall is a weekly online event for English learners. In order to help you learn English, a tutor answers to the questions you may have.</p>
+							<a class="main-button icon-button" href="{% url 'register'%}">Get Started!</a>
 						</div>
 					</div>
 				</div>
@@ -115,7 +40,7 @@
 					<div class="col-md-6">
 						<div class="section-header">
 							<h2>Welcome to Online Study Hall</h2>
-							<p class="lead">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
+							<p class="lead">This study event aims to motivate the learners by regulary studying together with other learners. Learners can ask their questions to the tutor regarding English language.</p>
 						</div>
 
 						<!-- feature -->
@@ -123,7 +48,7 @@
 							<i class="feature-icon fa fa-flask"></i>
 							<div class="feature-content">
 								<h4>Online Courses </h4>
-								<p>Ceteros fuisset mei no, soleat epicurei adipiscing ne vis. Et his suas veniam nominati.</p>
+								<p>Personal mentoring is available. Please <a href="https://twitter.com/_Newword">contact me </p>
 							</div>
 						</div>
 						<!-- /feature -->
@@ -169,7 +94,7 @@
 
 			<!-- container -->
 			<div class="container">
-
+<!-- 
 				<!-- row -->
 				<div class="row">
 					<div class="section-header text-center">
@@ -192,9 +117,9 @@
 									<img src="./img/course01.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">Beginner to Pro in Excel: Financial Modeling and Valuation</a>
+								<a class="course-title" href="#">TOEIC 500</a>
 								<div class="course-details">
-									<span class="course-category">Business</span>
+									<span class="course-category">Begginer</span>
 									<span class="course-price course-free">Free</span>
 								</div>
 							</div>
@@ -208,9 +133,9 @@
 									<img src="./img/course02.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">Introduction to CSS </a>
+								<a class="course-title" href="#">TOEIC 650 </a>
 								<div class="course-details">
-									<span class="course-category">Web Design</span>
+									<span class="course-category">Intermidiate</span>
 									<span class="course-price course-premium">Premium</span>
 								</div>
 							</div>
@@ -224,9 +149,9 @@
 									<img src="./img/course03.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">The Ultimate Drawing Course | From Beginner To Advanced</a>
+								<a class="course-title" href="#">TOEIC 800</a>
 								<div class="course-details">
-									<span class="course-category">Drawing</span>
+									<span class="course-category">Advanced</span>
 									<span class="course-price course-premium">Premium</span>
 								</div>
 							</div>
@@ -239,9 +164,9 @@
 									<img src="./img/course04.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">The Complete Web Development Course</a>
+								<a class="course-title" href="#">Join a group talk</a>
 								<div class="course-details">
-									<span class="course-category">Web Development</span>
+									<span class="course-category">Community</span>
 									<span class="course-price course-free">Free</span>
 								</div>
 							</div>
@@ -261,9 +186,9 @@
 									<img src="./img/course05.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">PHP Tips, Tricks, and Techniques</a>
+								<a class="course-title" href="#">Find friends</a>
 								<div class="course-details">
-									<span class="course-category">Web Development</span>
+									<span class="course-category">Community</span>
 									<span class="course-price course-free">Free</span>
 								</div>
 							</div>
@@ -277,10 +202,10 @@
 									<img src="./img/course06.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">All You Need To Know About Web Design</a>
+								<a class="course-title" href="#">TOEFL ibt 60</a>
 								<div class="course-details">
-									<span class="course-category">Web Design</span>
-									<span class="course-price course-free">Free</span>
+									<span class="course-category">Academic</span>
+									<span class="course-price course-premium">Premium</span>
 								</div>
 							</div>
 						</div>
@@ -293,10 +218,10 @@
 									<img src="./img/course07.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">How to Get Started in Photography</a>
+								<a class="course-title" href="#">TOEFL ibt 80</a>
 								<div class="course-details">
-									<span class="course-category">Photography</span>
-									<span class="course-price course-free">Free</span>
+									<span class="course-category">Academic</span>
+									<span class="course-price course-premium">Premium</span>
 								</div>
 							</div>
 						</div>
@@ -310,10 +235,10 @@
 									<img src="./img/course08.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
-								<a class="course-title" href="#">Typography From A to Z</a>
+								<a class="course-title" href="#">TOEFL ibt 100</a>
 								<div class="course-details">
-									<span class="course-category">Typography</span>
-									<span class="course-price course-free">Free</span>
+									<span class="course-category">Academic</span>
+									<span class="course-price course-premium">Premium</span>
 								</div>
 							</div>
 						</div>
@@ -335,7 +260,7 @@
 			<!-- container -->
 
 		</div>
-		<!-- /Courses -->
+		/Courses -->
 
 		<!-- Call To Action -->
 		<div id="cta" class="section">
@@ -549,6 +474,5 @@
 		<script type="text/javascript" src="{% static 'authenticate/js/bootstrap.min.js' %}"></script>
 		<script type="text/javascript" src="{% static 'authenticate/js/main.js' %}"></script>
 
-	</body>
-</html>
+
 {% endblock %}
