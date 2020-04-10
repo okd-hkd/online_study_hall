@@ -7,13 +7,12 @@ from django.contrib import messages
 
 
 # Create your views here.
-def home(request):
+def about(request):
     return render(request, 'authenticate/home.html',{})
 
 
 def index(request):
     return render(request, 'authenticate/index.html',{})
-
 
 
 def login_user(request):
